@@ -12,10 +12,10 @@
 
     <Grid>
         <Button x:Name="Apply" Content="Apply" Click="Apply_Click"/>
-        <Button x:Name="Reset" Content="Reset"  HorizontalAlignment="Right"  VerticalAlignment="Top" Click="Reset_Click"/>
+        <Button x:Name="Reset" Content="Reset"   Margin="60,330,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Reset_Click"/>
 
         <ComboBox x:Name="colorComboBox" Width="200"
-              Header="Colors" PlaceholderText="Pick a color">
+               PlaceholderText="Data">
             <x:String>Model</x:String>
             <x:String>Color</x:String>
             <x:String>Company</x:String>
