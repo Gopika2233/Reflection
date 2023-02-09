@@ -11,7 +11,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="Apply" Content="Apply" Click="Apply_Click"/>
+        <Button x:Name="Apply" Content="Apply" Click="Apply_Click"    />
         <Button x:Name="Reset" Content="Reset"   Margin="60,330,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Reset_Click"/>
 
         <ComboBox x:Name="colorComboBox" Width="200"
@@ -20,14 +20,23 @@
             <x:String>Color</x:String>
             <x:String>Company</x:String>
             <x:String>Price</x:String>
+            <x:String>Manufacturedate</x:String>
         </ComboBox>
 
         <!--<TextBox x:Name="t5"   Width="200"   Height="200"  HorizontalAlignment="Left"    VerticalAlignment="Top"   Text="{x:Bind }"/>-->
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="219" Width="289">
+                    <StackPanel     x:Name="Date"  Orientation="Horizontal"        Margin="50,270,0,0"  Visibility="Collapsed">
+                <CalendarDatePicker x:Name="FromDate" Header="From Date" PlaceholderText="-Select-" />
+                <CalendarDatePicker x:Name="ToDate" Header="To Date" PlaceholderText="-Select-" Margin="20,0,0,0"/>
+            </StackPanel>
+
+        
+        
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="219" Width="500">
             
-            <charting:Chart x:Name="PieChart" VerticalAlignment="Center" Height="219" Width="289">
-                <charting:PieSeries x:Name="pie"  Margin="-11,-44,-7,-23" IndependentValuePath="" DependentValuePath="" IsSelectionEnabled="True" ItemsSource="{Binding   }"    />
+            <charting:Chart x:Name="PieChart" VerticalAlignment="Center" Height="219" Width="500">
+                <charting:PieSeries x:Name="pie"  Margin="-21,-44,-7,-23" IndependentValuePath="" DependentValuePath="" IsSelectionEnabled="True" ItemsSource="{Binding   }"    />
 
             </charting:Chart>
         </StackPanel>
